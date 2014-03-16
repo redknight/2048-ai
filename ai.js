@@ -1,3 +1,4 @@
+(function(document){
 function triggerKey(key) {
 	var code = key === ' ' ? 32 :
 		key === 'Left' ? 37 :
@@ -89,3 +90,4 @@ function gameWon() {
 		triggerKey(randomMove()); // Prevents getting stuck
 	setTimeout(tick, 50);
 })();
+})(document.getElementsByClassName('game-boards')[0])
